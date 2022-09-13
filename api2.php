@@ -1,9 +1,17 @@
 <?php
-$a = isset($_POST['char1']);
-$b = isset($_POST['char2']);
-$c = isset($_POST['char3']);
 
-$res = $a^3 + $b*$c - $a;
+var_number($_POST['number']);
+array (
+0 => $a = isset($_POST['nb1']),
+1 => $b = isset($_POST['nb2']),
+2 => $c = isset($_POST['nb3']),
+)
+if($b != 0){
+    $res = $a^3 + $b*$c - $a/$b;
+}else{
+    echo "Error second number must not be zero";
+}
+
 
 $result =[
     "res" => $res
