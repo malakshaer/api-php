@@ -1,21 +1,20 @@
 <?php
 
-var_number($_POST['number']);
-array (
-0 => $a = isset($_POST['nb1']),
-1 => $b = isset($_POST['nb2']),
-2 => $c = isset($_POST['nb3']),
-)
-if($b != 0){
-    $res = $a^3 + $b*$c - $a/$b;
+$a = isset($_POST['a']);
+$b = isset($_POST['b']);
+$c = isset($_POST['c']);
+
+if(isset($_POST['b']) != 0){
+    $res = pow($a,3) + ($b*3) - ($a/$b);
+
 }else{
-    echo "Error second number must not be zero";
+    echo "Error";
 }
 
-
 $result =[
-    "res" => $res
+    "result" => $res
 ];
+
 echo json_encode($result);
 
 ?>
