@@ -4,11 +4,11 @@ $a = isset($_POST['a']);
 $b = isset($_POST['b']);
 $c = isset($_POST['c']);
 
-if(isset($_POST['b']) != 0){
+if($b != 0){
     $res = pow($a,3) + ($b*3) - ($a/$b);
 
 }else{
-    echo "Error";
+    echo "Error in second input";
 }
 
 $result =[
