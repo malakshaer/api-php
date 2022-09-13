@@ -1,5 +1,5 @@
 <?php
-$password = $_POST['password'];
+$password = isset($_POST['password']);
 
 $uppercase = preg_match('@[A-Z]@', $password);
 $lowercase = preg_match('@[a-z]@', $password);
